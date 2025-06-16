@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Loja Personalizados - Protótipo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Loja Personalizados</h1>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#" onclick="mostrarLogin()">Login</a>
+      <a href="#" onclick="mostrarCadastro()">Solicitar Cadastro</a>
+      <a href="#" onclick="mostrarCarrinho()">Carrinho (<span id="totalItens">0</span>)</a>
+    </nav>
+  </header>
+
+  <main id="areaPrincipal">
+    <h2 id="produtos">Nossos Produtos</h2>
+    <div class="container" id="listaProdutos"></div>
+  </main>
+
+  <div class="carrinho" id="carrinho" style="display:none;">
+    <h3>Carrinho</h3>
+    <ul id="itensCarrinho"></ul>
+    <button onclick="finalizarPedido()">Finalizar Pedido</button>
+  </div>
+
+  <div class="login" id="loginArea" style="display:none;">
+    <h3>Login</h3>
+    <input type="email" id="emailLogin" placeholder="Email"><br><br>
+    <input type="password" id="senhaLogin" placeholder="Senha"><br><br>
+    <button onclick="logar()">Entrar</button>
+  </div>
+
+  <div class="cadastro" id="cadastroArea" style="display:none;">
+    <h3>Solicitar Cadastro</h3>
+    <input type="text" placeholder="Nome"><br><br>
+    <input type="text" placeholder="Sobrenome"><br><br>
+    <input type="email" placeholder="Email"><br><br>
+    <input type="tel" placeholder="Telefone"><br><br>
+    <input type="text" placeholder="CPF ou CNPJ"><br><br>
+    <button>Enviar Solicitação</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Loja Personalizados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
